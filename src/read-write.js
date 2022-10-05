@@ -24,10 +24,10 @@ export function writeDataToFiles(fileName, outputDir) {
     return async function (data) {
         const {averagesArray, popularArray} = data;
         const averagesWriter = createArrayCsvWriter({
-            path: path.join(outputDir, `0_${fileName}`),
+            path: path.join(outputDir, `0_${path.basename(fileName)}`),
         });
         const popularWriter = createArrayCsvWriter({
-            path: path.join(outputDir, `1_${fileName}`),
+            path: path.join(outputDir, `1_${path.basename(fileName)}`),
         })
 
         const writeAveragesPromise = averagesWriter.writeRecords(averagesArray);
@@ -48,16 +48,16 @@ export async function checkInputFileReadable(path) {
     try {
         await fs.promises.access(path, fs.constants.R_OK);
         return true;
-    } catch (e) {
+    } catch (_) {
         return false;
     }
 }
 
 export async function checkDirWritable(path) {
     try {
-        await fs.promises.access(path,  fs.constants.W_OK);
+        await fs.promises.access(path, fs.constants.W_OK);
         return true;
-    } catch (e) {
+    } catch (_) {
         return false;
     }
 }

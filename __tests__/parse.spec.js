@@ -1,5 +1,5 @@
 import {describe, it, expect} from 'vitest';
-import parseRecords from "./parse.js";
+import parseRecords from "../src/parse.js";
 console.log = ()=>{}
 
 describe('csv parsing suite', () => {
