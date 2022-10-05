@@ -1,0 +1,22 @@
+{
+  "name": "cli-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "vitest run --reporter verbose",
+    "test:ui": "vitest --ui"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parse": "^5.3.0",
+    "csv-writer": "^1.6.0"
+  },
+  "devDependencies": {
+    "@vitest/ui": "^0.23.4",
+    "vitest": "^0.23.4"
+  }
+}
