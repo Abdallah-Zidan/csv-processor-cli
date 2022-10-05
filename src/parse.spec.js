@@ -1,5 +1,6 @@
 import {describe, it, expect} from 'vitest';
 import parseRecords from "./parse.js";
+console.log = ()=>{}
 
 describe('csv parsing suite', () => {
     it("should parse 2 csv comma seperated lines successfully and return expected list of objects", async () => {
