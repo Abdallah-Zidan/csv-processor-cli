@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chalk": "^5.1.0",
     "csv-parse": "^5.3.0",
     "csv-writer": "^1.6.0"
   },

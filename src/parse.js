@@ -1,5 +1,5 @@
 import {parse} from "csv-parse";
-
+import chalk from "chalk"
 /**
  * @param {string} input
  * @return {Promise<import('./types').Order[]>}
@@ -27,14 +27,14 @@ export default function parseRecords(input) {
  */
 function mapRecordToOrder(record) {
     if (!isValidRecord(record)) {
-        console.log("excluding invalid record ", JSON.stringify(record));
+        console.log(chalk.yellowBright(`excluding invalid record of the id '${record[0]}' `, JSON.stringify(record)));
         return null;
     }
 
     const quantity = Number(record[3]);
 
     if (isNaN(quantity) || quantity < 0){
-        console.log("excluding record due to its invalid quantity value ", JSON.stringify(record));
+        console.log(chalk.yellowBright(`excluding record of the id '${record[0]}' due to its invalid quantity value `, JSON.stringify(record)));
         return null;
     }
 

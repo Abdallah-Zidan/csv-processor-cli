@@ -2,11 +2,13 @@ lockfileVersion: 5.4
 
 specifiers:
   '@vitest/ui': ^0.23.4
+  chalk: ^5.1.0
   csv-parse: ^5.3.0
   csv-writer: ^1.6.0
   vitest: ^0.23.4
 
 dependencies:
+  chalk: 5.1.0
   csv-parse: 5.3.0
   csv-writer: 1.6.0
 
@@ -80,6 +82,11 @@ packages:
       pathval: 1.1.1
       type-detect: 4.0.8
     dev: true
+
+  /chalk/5.1.0:
+    resolution: {integrity: sha512-56zD4khRTBoIyzUYAFgDDaPhUMN/fC/rySe6aZGqbj/VWiU2eI3l6ZLOtYGFZAV5v02mwPjtpzlrOveJiz5eZQ==}
+    engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
+    dev: false
 
   /check-error/1.0.2:
     resolution: {integrity: sha512-BrgHpW9NURQgzoNyjfq0Wu6VFO6D7IZEmJNdtgNqpzGG8RuNFHt2jQxWlAs4HMe119chBnv+34syEZtc6IhLtA==}
