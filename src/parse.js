@@ -8,6 +8,9 @@ export default function parseRecords(input) {
     return new Promise((resolve, reject) => {
         parse(input, {
             comment: '#',
+            skipEmptyLines:true,
+            skipRecordsWithEmptyValues:true,
+            skipRecordsWithError:true,
         }, function (err, records) {
             if (err) {
                 reject(err);
