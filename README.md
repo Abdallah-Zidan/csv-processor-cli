@@ -37,6 +37,10 @@
 
 A simple CLI app that receives a csv file with orders data comma seperated and calulate average of each product throught the orders and specify the most popular brand for each product and in the end writes the results to output csv files
 
+### Notes:
+
+1. The application assumes that any corrupted order record will be excluded from calculations (record with non numeric or negative quantity)
+2. Stream api could be used if the files were larger in size but it's not in our case 10^4 rows wouldn't exceed the average of 2mb.
 
 ### Built With
 
